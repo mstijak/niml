@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>NIML</title>
+  <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+  <script src="//code.jquery.com/jquery-2.1.3.min.js"></script>
+</head>
+
+<body>
+  <nav class="navbar navbar-default">
+    <div class="container">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="index.html">NIML</a>
+      </div>
+
+      <div class="collapse navbar-collapse">
+        <ul class="nav navbar-nav">
+          <li class=""><a href="index.html">About</a>
+          </li>
+          <li class=""><a href="try.html">Try It</a>
+          </li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="https://github.com/mstijak/niml">GitHub</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div class="container">
+    <div class="jumbotron">
+      <h1>NIML<small>Non-Indented Markup Language</small></h1>
+      <p>NIML is a text oriented markup language, convertible to HTML or XML. NIML&#39;s purpose is to be used for documentation and templating, therefore its top objective is to be simple to read and write.</p>
+    </div>
+    <div class="row">
+      <div class="col-md-6">
+        <p class="lead">Features:</p>
+        <ul>
+          <li>No indenting. 99% lines start at first position and fit 80 character line.</li>
+          <li>No closing tags</li>
+          <li>Simpler tags (no brackets)</li>
+          <li>Templating</li>
+        </ul>
+      </div>
+      <div class="col-md-6">
+        <p class="lead">Example:</p><pre><code>html+
+head
++title NIML
++link { href: niml.css rel: stylesheet type: text/css  }
+body+
+div+ { class: container }
+h1 NIML
+p Paragraph</code></pre>
+      </div>
+    </div>
+    <h2>Influence</h2>
+    <p>NIML is inspired by ideas from other languages. It&#39;s only unique feature (and flaw in the same time) is its element nesting syntax.</p>
+    <table class="table table-bordered">
+      <tr>
+        <th>Language</th>
+        <th>Ideas taken to NIML</th>
+        <th>What&#39;s missing? Why NIML makes sense?</th>
+      </tr>
+      <tr>
+        <th>HTML/XML</th>
+        <td>markup language</td>
+        <td>indented, verbose</td>
+      </tr>
+      <tr>
+        <th>TOML</th>
+        <td>not indented</td>
+        <td>doesn&#39;t handle text that well</td>
+      </tr>
+      <tr>
+        <th>Markdown</th>
+        <td>text oriented</td>
+        <td>doesn&#39;t help with markup</td>
+      </tr>
+      <tr>
+        <th>HAML/YAML</th>
+        <td>bracketless tags, no end tags</td>
+        <td>indented</td>
+      </tr>
+      <tr>
+        <th>Razor</th>
+        <td>@template syntax</td>
+        <td>N/A</td>
+      </tr>
+    </table>
+    <h2 id="syntax">Syntax</h2>
+    <table class="table table-bordered">
+      <tr>
+        <th></th>
+        <th>NIML</th>
+        <th>HTML/XML</th>
+      </tr>
+      <tr>
+        <th>One liners</th>
+        <td><pre>h1 This is a title</pre>
+        </td>
+        <td><pre>&lt;h1&gt;This is a title&lt;/h1&gt;</pre>
+        </td>
+      </tr>
+      <tr>
+        <th>Multiline text</th>
+        <td><pre>p &lt;
+Text in multiple lines should
+be wrapped in angle brackets.
+&gt;</pre>
+        </td>
+        <td><pre>&lt;p&gt;Text in multiple lines should
+be wrapped in angle brackets.&lt;/p&gt;</pre>
+        </td>
+      </tr>
+      <tr>
+        <th>Attributes</th>
+        <td><pre>h2 { id: chapter1 } Chapter 1</pre>
+        </td>
+        <td><pre>&lt;h2 id=&quot;chapter1&quot;&gt;Chapter 1&lt;/h2&gt;</pre>
+        </td>
+      </tr>
+      <tr>
+        <th>Nesting elements</th>
+        <td><pre>html+
+
+head
++title Title
+
+body+
+
+h1 Header
++small Extra
+
+p Paragraph</pre>
+        </td>
+        <td><pre>&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;Title&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+     &lt;h1&gt;Header&lt;small&gt;Extra&lt;/small&gt;&lt;h1&gt;
+     &lt;p&gt;Paragraph&lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</pre>
+        </td>
+      </tr>
+      <tr>
+        <th>Quotes</th>
+        <td><pre>pre &lt;&quot;
+&lt;a href=&quot;&quot;#&quot;&quot;&gt;Link&lt;/a&gt;
+&quot;&gt;</pre>
+        </td>
+        <td><pre>&lt;pre&gt;
+  &amp;lt;a href=&quot;#&quot;&amp;gt;Link&amp;lt;/a&amp;gt;
+&lt;/pre&gt;</pre>
+        </td>
+      </tr>
+      <tr>
+        <th>Templating</th>
+        <td><pre>@for (var i = 0; i&lt;10; i++) {@
++li @i
+}</pre>
+        </td>
+        <td></td>
+      </tr>
+    </table>
+  </div>
+</body>
+
+</html>
