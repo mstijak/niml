@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>NIML</title>
+  <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+  <script src="//code.jquery.com/jquery-2.1.3.min.js"></script>
+</head>
+
+<body>
+  <nav class="navbar navbar-default">
+    <div class="container">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="index.html">NIML</a>
+      </div>
+
+      <div class="collapse navbar-collapse">
+        <ul class="nav navbar-nav">
+          <li class=""><a href="index.html">About</a>
+          </li>
+          <li class=""><a href="try.html">Try It</a>
+          </li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="https://github.com/mstijak/niml">GitHub</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <p>NIML:</p>
+        <textarea id="input" style="width: 100%" rows="20">html+&#10;&#10;head&#10;+title NIML&#10;+link { href: niml.css rel: stylesheet type: text/css }&#10;&#10;body+&#10;div+ { class: container }&#10;h1 NIML&#10;p Paragraph&#10;</textarea>
+      </div>
+      <div class="col-md-6">
+        <p>Result:</p><pre><code id="result"></code></pre>
+      </div>
+      <script src="dist/try.js"></script>
+      <script>
+        $(function() {
+            function convert() {
+                var input = $('#input').val();
+                var html = NIML.convert(input);
+                $('#result').text(html);
+            }
+            $('#input').on('input', convert);
+            convert();
+        });
+      </script>
+    </div>
+  </div>
+</body>
+
+</html>

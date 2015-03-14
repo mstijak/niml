@@ -1,0 +1,156 @@
+div+ { class: jumbotron }
+h1 NIML
++small Non-Indented Markup Language
+
+p <
+NIML is a text oriented markup language, convertible to HTML or XML.
+NIML's purpose is to be used for documentation and templating, therefore its top objective
+is to be simple to read and write.
+>
+-
+
+div+ { class: row }
+div+ { class: col-md-6 }
+p { class: lead } <
+Features:
+>
+ul
++li No indenting. 99% lines start at first position and fit 80 character line.
++li No closing tags
++li Simpler tags (no brackets)
++li Templating
+-
+
+div+ { class: col-md-6 }
+p { class: lead } Example:
+pre
++code <
+html+
+head
++title NIML
++link { href: niml.css rel: stylesheet type: text/css  }
+body+
+div+ { class: container }
+h1 NIML
+p Paragraph
+>
+-
+-
+
+h2 Influence
+
+p <
+NIML is inspired by ideas from other languages. It's only unique feature (and flaw in the same time)
+is its element nesting syntax.
+>
+table+ { class: "table table-bordered" }
+tr+ | th Language | th Ideas taken to NIML | th What's missing? Why NIML makes sense? |-
+tr+ | th HTML/XML | td markup language | td indented, verbose |-
+tr+ | th TOML | td not indented | td doesn't handle text that well|-
+tr+ | th Markdown | td text oriented | td doesn't help with markup |-
+tr+ | th HAML/YAML | td bracketless tags, no end tags | td indented |-
+tr+ | th Razor | td @template syntax | td N/A |-
+-
+
+h2 {id:syntax} Syntax
+
+table+ { class: "table table-bordered" }
+tr+
+th
+th NIML
+th HTML/XML
+-
+
+tr+
+th One liners
+td | +pre h1 This is a title
+td | +pre "<h1>This is a title</h1>"
+-
+
+tr+
+th Multiline text
+td
++pre <"
+p <
+Text in multiple lines should
+be wrapped in angle brackets.
+>
+">
+td
++pre <"
+<p>Text in multiple lines should
+be wrapped in angle brackets.</p>
+">
+-
+
+tr+
+th Attributes
+td | +pre h2 { id: chapter1 } Chapter 1
+td | +pre "<h2 id=""chapter1"">Chapter 1</h2>"
+-
+
+tr+
+th Nesting elements
+td
++pre <"
+html+
+
+head
++title Title
+
+body+
+
+h1 Header
++small Extra
+
+p Paragraph
+">
+td
++pre <"
+<html>
+  <head>
+    <title>Title</title>
+  </head>
+  <body>
+     <h1>Header<small>Extra</small><h1>
+     <p>Paragraph</p>
+  </body>
+</html>
+">
+-
+
+tr+
+th Quotes
+td
++pre <"
+pre <""
+<a href=""""#"""">Link</a>
+"">
+">
+
+td
++pre <"
+<pre>
+  &lt;a href=""#""&gt;Link&lt;/a&gt;
+</pre>
+">
+-
+
+tr+
+th Templating
+td
++pre <
+@for (var i = 0; i<10; i++) {@
++li @i
+}
+>
+
+td
+
+-
+-
+
+
+
+
+

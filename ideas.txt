@@ -1,0 +1,3 @@
+/Commenting
+Single quotes
+HTML/XML compatible attributes a="b"

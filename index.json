@@ -1,0 +1,595 @@
+[
+  {
+    "name": "div",
+    "attributes": {
+      "class": "jumbotron"
+    },
+    "children": [
+      {
+        "name": "h1",
+        "children": [
+          {
+            "text": "NIML"
+          },
+          {
+            "name": "small",
+            "children": [
+              {
+                "text": "Non-Indented Markup Language"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "p",
+        "children": [
+          {
+            "text": "NIML is a text oriented markup language, convertible to HTML or XML.\nNIML's purpose is to be used for documentation and templating, therefore its top objective\nis to be simple to read and write."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "div",
+    "attributes": {
+      "class": "row"
+    },
+    "children": [
+      {
+        "name": "div",
+        "attributes": {
+          "class": "col-md-6"
+        },
+        "children": [
+          {
+            "name": "p",
+            "attributes": {
+              "class": "lead"
+            },
+            "children": [
+              {
+                "text": "Features:"
+              }
+            ]
+          },
+          {
+            "name": "ul",
+            "children": [
+              {
+                "name": "li",
+                "children": [
+                  {
+                    "text": "No indenting. 99% lines start at first position and fit 80 character line."
+                  }
+                ]
+              },
+              {
+                "name": "li",
+                "children": [
+                  {
+                    "text": "No closing tags"
+                  }
+                ]
+              },
+              {
+                "name": "li",
+                "children": [
+                  {
+                    "text": "Simpler tags (no brackets)"
+                  }
+                ]
+              },
+              {
+                "name": "li",
+                "children": [
+                  {
+                    "text": "Templating"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "div",
+        "attributes": {
+          "class": "col-md-6"
+        },
+        "children": [
+          {
+            "name": "p",
+            "attributes": {
+              "class": "lead"
+            },
+            "children": [
+              {
+                "text": "Example:"
+              }
+            ]
+          },
+          {
+            "name": "pre",
+            "children": [
+              {
+                "name": "code",
+                "children": [
+                  {
+                    "text": "html+\nhead\n+title NIML\n+link { href: niml.css rel: stylesheet type: text/css  }\nbody+\ndiv+ { class: container }\nh1 NIML\np Paragraph"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "h2",
+    "children": [
+      {
+        "text": "Influence"
+      }
+    ]
+  },
+  {
+    "name": "p",
+    "children": [
+      {
+        "text": "NIML is inspired by ideas from other languages. It's only unique feature (and flaw in the same time)\nis its element nesting syntax."
+      }
+    ]
+  },
+  {
+    "name": "table",
+    "attributes": {
+      "class": "table table-bordered"
+    },
+    "children": [
+      {
+        "name": "tr",
+        "children": [
+          {
+            "name": "th",
+            "children": [
+              {
+                "text": "Language "
+              }
+            ]
+          },
+          {
+            "name": "th",
+            "children": [
+              {
+                "text": "Ideas taken to NIML "
+              }
+            ]
+          },
+          {
+            "name": "th",
+            "children": [
+              {
+                "text": "What's missing? Why NIML makes sense? "
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "tr",
+        "children": [
+          {
+            "name": "th",
+            "children": [
+              {
+                "text": "HTML/XML "
+              }
+            ]
+          },
+          {
+            "name": "td",
+            "children": [
+              {
+                "text": "markup language "
+              }
+            ]
+          },
+          {
+            "name": "td",
+            "children": [
+              {
+                "text": "indented, verbose "
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "tr",
+        "children": [
+          {
+            "name": "th",
+            "children": [
+              {
+                "text": "TOML "
+              }
+            ]
+          },
+          {
+            "name": "td",
+            "children": [
+              {
+                "text": "not indented "
+              }
+            ]
+          },
+          {
+            "name": "td",
+            "children": [
+              {
+                "text": "doesn't handle text that well"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "tr",
+        "children": [
+          {
+            "name": "th",
+            "children": [
+              {
+                "text": "Markdown "
+              }
+            ]
+          },
+          {
+            "name": "td",
+            "children": [
+              {
+                "text": "text oriented "
+              }
+            ]
+          },
+          {
+            "name": "td",
+            "children": [
+              {
+                "text": "doesn't help with markup "
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "tr",
+        "children": [
+          {
+            "name": "th",
+            "children": [
+              {
+                "text": "HAML/YAML "
+              }
+            ]
+          },
+          {
+            "name": "td",
+            "children": [
+              {
+                "text": "bracketless tags, no end tags "
+              }
+            ]
+          },
+          {
+            "name": "td",
+            "children": [
+              {
+                "text": "indented "
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "tr",
+        "children": [
+          {
+            "name": "th",
+            "children": [
+              {
+                "text": "Razor "
+              }
+            ]
+          },
+          {
+            "name": "td",
+            "children": [
+              {
+                "text": "@template syntax "
+              }
+            ]
+          },
+          {
+            "name": "td",
+            "children": [
+              {
+                "text": "N/A "
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "h2",
+    "attributes": {
+      "id": "syntax"
+    },
+    "children": [
+      {
+        "text": "Syntax"
+      }
+    ]
+  },
+  {
+    "name": "table",
+    "attributes": {
+      "class": "table table-bordered"
+    },
+    "children": [
+      {
+        "name": "tr",
+        "children": [
+          {
+            "name": "th"
+          },
+          {
+            "name": "th",
+            "children": [
+              {
+                "text": "NIML"
+              }
+            ]
+          },
+          {
+            "name": "th",
+            "children": [
+              {
+                "text": "HTML/XML"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "tr",
+        "children": [
+          {
+            "name": "th",
+            "children": [
+              {
+                "text": "One liners"
+              }
+            ]
+          },
+          {
+            "name": "td",
+            "children": [
+              {
+                "name": "pre",
+                "children": [
+                  {
+                    "text": "h1 This is a title"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "td",
+            "children": [
+              {
+                "name": "pre",
+                "children": [
+                  {
+                    "text": "<h1>This is a title</h1>"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "tr",
+        "children": [
+          {
+            "name": "th",
+            "children": [
+              {
+                "text": "Multiline text"
+              }
+            ]
+          },
+          {
+            "name": "td",
+            "children": [
+              {
+                "name": "pre",
+                "children": [
+                  {
+                    "text": "p <\nText in multiple lines should\nbe wrapped in angle brackets.\n>"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "td",
+            "children": [
+              {
+                "name": "pre",
+                "children": [
+                  {
+                    "text": "<p>Text in multiple lines should\nbe wrapped in angle brackets.</p>"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "tr",
+        "children": [
+          {
+            "name": "th",
+            "children": [
+              {
+                "text": "Attributes"
+              }
+            ]
+          },
+          {
+            "name": "td",
+            "children": [
+              {
+                "name": "pre",
+                "children": [
+                  {
+                    "text": "h2 { id: chapter1 } Chapter 1"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "td",
+            "children": [
+              {
+                "name": "pre",
+                "children": [
+                  {
+                    "text": "<h2 id=\"chapter1\">Chapter 1</h2>"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "tr",
+        "children": [
+          {
+            "name": "th",
+            "children": [
+              {
+                "text": "Nesting elements"
+              }
+            ]
+          },
+          {
+            "name": "td",
+            "children": [
+              {
+                "name": "pre",
+                "children": [
+                  {
+                    "text": "html+\n\nhead\n+title Title\n\nbody+\n\nh1 Header\n+small Extra\n\np Paragraph"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "td",
+            "children": [
+              {
+                "name": "pre",
+                "children": [
+                  {
+                    "text": "<html>\n  <head>\n    <title>Title</title>\n  </head>\n  <body>\n     <h1>Header<small>Extra</small><h1>\n     <p>Paragraph</p>\n  </body>\n</html>"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "tr",
+        "children": [
+          {
+            "name": "th",
+            "children": [
+              {
+                "text": "Quotes"
+              }
+            ]
+          },
+          {
+            "name": "td",
+            "children": [
+              {
+                "name": "pre",
+                "children": [
+                  {
+                    "text": "pre <\"\n<a href=\"\"#\"\">Link</a>\n\">"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "td",
+            "children": [
+              {
+                "name": "pre",
+                "children": [
+                  {
+                    "text": "<pre>\n  &lt;a href=\"#\"&gt;Link&lt;/a&gt;\n</pre>"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "tr",
+        "children": [
+          {
+            "name": "th",
+            "children": [
+              {
+                "text": "Templating"
+              }
+            ]
+          },
+          {
+            "name": "td",
+            "children": [
+              {
+                "name": "pre",
+                "children": [
+                  {
+                    "text": "@for (var i = 0; i<10; i++) {@\n+li @i\n}"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "td"
+          }
+        ]
+      }
+    ]
+  }
+]

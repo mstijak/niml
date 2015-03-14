@@ -1,0 +1,82 @@
+[
+  {
+    "name": "div",
+    "attributes": {
+      "class": "row"
+    },
+    "children": [
+      {
+        "name": "div",
+        "attributes": {
+          "class": "col-md-6"
+        },
+        "children": [
+          {
+            "name": "p",
+            "children": [
+              {
+                "text": "NIML:"
+              }
+            ]
+          },
+          {
+            "name": "textarea",
+            "attributes": {
+              "id": "input",
+              "style": "width: 100%",
+              "rows": "20"
+            },
+            "children": [
+              {
+                "text": "html+&#10;&#10;head&#10;+title NIML&#10;+link { href: niml.css rel: stylesheet type: text/css  }&#10;&#10;body+&#10;div+ { class: container }&#10;h1 NIML&#10;p Paragraph&#10;",
+                "raw": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "div",
+        "attributes": {
+          "class": "col-md-6"
+        },
+        "children": [
+          {
+            "name": "p",
+            "children": [
+              {
+                "text": "Result:"
+              }
+            ]
+          },
+          {
+            "name": "pre",
+            "children": [
+              {
+                "name": "code",
+                "attributes": {
+                  "id": "result"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "script",
+        "attributes": {
+          "src": "dist/try.js"
+        }
+      },
+      {
+        "name": "script",
+        "children": [
+          {
+            "text": "$(function() {\n    function convert() {\n        var input = $('#input').val();\n        var html = NIML.convert(input);\n        $('#result').text(html);\n    }\n    $('#input').on('input', convert);\n    convert();\n});\n\n",
+            "raw": true
+          }
+        ]
+      }
+    ]
+  }
+]
