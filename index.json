@@ -62,30 +62,30 @@
                 "children": [
                   {
                     "text": "No indenting. 99% lines start at first position and fit 80 character line."
-                  }
-                ]
-              },
-              {
-                "name": "li",
-                "children": [
+                  },
                   {
-                    "text": "No closing tags"
-                  }
-                ]
-              },
-              {
-                "name": "li",
-                "children": [
-                  {
-                    "text": "Simpler tags (no brackets)"
-                  }
-                ]
-              },
-              {
-                "name": "li",
-                "children": [
-                  {
-                    "text": "Templating"
+                    "name": "li",
+                    "children": [
+                      {
+                        "text": "No closing tags"
+                      },
+                      {
+                        "name": "li",
+                        "children": [
+                          {
+                            "text": "Simpler tags (no brackets)"
+                          },
+                          {
+                            "name": "li",
+                            "children": [
+                              {
+                                "text": "Templating"
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
                   }
                 ]
               }
@@ -156,7 +156,7 @@
             "name": "th",
             "children": [
               {
-                "text": "Language "
+                "text": "Language"
               }
             ]
           },
@@ -164,7 +164,7 @@
             "name": "th",
             "children": [
               {
-                "text": "Ideas taken to NIML "
+                "text": "Ideas taken to NIML"
               }
             ]
           },
@@ -172,7 +172,7 @@
             "name": "th",
             "children": [
               {
-                "text": "What's missing? Why NIML makes sense? "
+                "text": "What's missing? Why NIML makes sense?"
               }
             ]
           }
@@ -185,7 +185,7 @@
             "name": "th",
             "children": [
               {
-                "text": "HTML/XML "
+                "text": "HTML/XML"
               }
             ]
           },
@@ -193,7 +193,7 @@
             "name": "td",
             "children": [
               {
-                "text": "markup language "
+                "text": "markup language"
               }
             ]
           },
@@ -201,7 +201,7 @@
             "name": "td",
             "children": [
               {
-                "text": "indented, verbose "
+                "text": "indented, verbose"
               }
             ]
           }
@@ -214,7 +214,7 @@
             "name": "th",
             "children": [
               {
-                "text": "TOML "
+                "text": "TOML"
               }
             ]
           },
@@ -222,7 +222,7 @@
             "name": "td",
             "children": [
               {
-                "text": "not indented "
+                "text": "not indented"
               }
             ]
           },
@@ -243,7 +243,7 @@
             "name": "th",
             "children": [
               {
-                "text": "Markdown "
+                "text": "Markdown"
               }
             ]
           },
@@ -251,7 +251,7 @@
             "name": "td",
             "children": [
               {
-                "text": "text oriented "
+                "text": "text oriented"
               }
             ]
           },
@@ -259,7 +259,7 @@
             "name": "td",
             "children": [
               {
-                "text": "doesn't help with markup "
+                "text": "doesn't help with markup"
               }
             ]
           }
@@ -272,7 +272,7 @@
             "name": "th",
             "children": [
               {
-                "text": "HAML/YAML "
+                "text": "HAML/YAML"
               }
             ]
           },
@@ -280,7 +280,7 @@
             "name": "td",
             "children": [
               {
-                "text": "bracketless tags, no end tags "
+                "text": "bracketless tags, no end tags"
               }
             ]
           },
@@ -288,7 +288,7 @@
             "name": "td",
             "children": [
               {
-                "text": "indented "
+                "text": "indented"
               }
             ]
           }
@@ -301,7 +301,7 @@
             "name": "th",
             "children": [
               {
-                "text": "Razor "
+                "text": "Razor"
               }
             ]
           },
@@ -309,7 +309,7 @@
             "name": "td",
             "children": [
               {
-                "text": "@template syntax "
+                "text": "@template syntax"
               }
             ]
           },
@@ -317,7 +317,7 @@
             "name": "td",
             "children": [
               {
-                "text": "N/A "
+                "text": "N/A"
               }
             ]
           }
@@ -554,6 +554,123 @@
                 "children": [
                   {
                     "text": "<pre>\n  &lt;a href=\"#\"&gt;Link&lt;/a&gt;\n</pre>"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "tr",
+        "children": [
+          {
+            "name": "th",
+            "children": [
+              {
+                "text": "Scripts"
+              }
+            ]
+          },
+          {
+            "name": "td",
+            "children": [
+              {
+                "name": "pre",
+                "children": [
+                  {
+                    "text": "+script <:\n//This will not be HTML encoded.\n$(function() { ... })\n>"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "td",
+            "children": [
+              {
+                "name": "pre",
+                "children": [
+                  {
+                    "text": "<script>\n  //This will not be HTML encoded.\n  $(function() { ... })\n</script>"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "tr",
+        "children": [
+          {
+            "name": "th",
+            "children": [
+              {
+                "text": "One line, multiple elements"
+              }
+            ]
+          },
+          {
+            "name": "td",
+            "children": [
+              {
+                "name": "pre",
+                "children": [
+                  {
+                    "text": "table+\ntr+ | th X | th Y |-\ntr+ | td x | td y |-\n-"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "td",
+            "children": [
+              {
+                "name": "pre",
+                "children": [
+                  {
+                    "text": "<table>\n  <tr>\n    <th>X</th>\n    <th>Y</th>\n  </tr>\n  <tr>\n    <td>x</td>\n    <td>y</td>\n  </tr>\n</table>"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "tr",
+        "children": [
+          {
+            "name": "th",
+            "children": [
+              {
+                "text": "Mixing text and elements"
+              }
+            ]
+          },
+          {
+            "name": "td",
+            "children": [
+              {
+                "name": "pre",
+                "children": [
+                  {
+                    "text": "p <\nThis a text containing a <a { href:# } link />.\n>"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "td",
+            "children": [
+              {
+                "name": "pre",
+                "children": [
+                  {
+                    "text": "<p>This a text containing a <a href=\"#\">link</a>.</p>"
                   }
                 ]
               }

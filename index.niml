@@ -137,6 +137,65 @@ td
 -
 
 tr+
+th Scripts
+td
++pre  <"
++script <:
+//This will not be HTML encoded.
+$(function() { ... })
+>
+">
+
+td
++pre <"
+<script>
+  //This will not be HTML encoded.
+  $(function() { ... })
+</script>
+">
+-
+
+tr+
+th One line, multiple elements
+td
++pre  <"
+table+
+tr+ | th X | th Y |-
+tr+ | td x | td y |-
+-
+">
+
+td
++pre <"
+<table>
+  <tr>
+    <th>X</th>
+    <th>Y</th>
+  </tr>
+  <tr>
+    <td>x</td>
+    <td>y</td>
+  </tr>
+</table>
+">
+-
+
+tr+
+th Mixing text and elements
+td
++pre  <"
+p <
+This a text containing a <a { href:# } link />.
+>
+">
+
+td
++pre <"
+<p>This a text containing a <a href=""#"">link</a>.</p>
+">
+-
+
+tr+
 th Templating
 td
 +pre <

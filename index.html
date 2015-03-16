@@ -37,10 +37,13 @@
       <div class="col-md-6">
         <p class="lead">Features:</p>
         <ul>
-          <li>No indenting. 99% lines start at first position and fit 80 character line.</li>
-          <li>No closing tags</li>
-          <li>Simpler tags (no brackets)</li>
-          <li>Templating</li>
+          <li>No indenting. 99% lines start at first position and fit 80 character line.
+            <li>No closing tags
+              <li>Simpler tags (no brackets)
+                <li>Templating</li>
+              </li>
+            </li>
+          </li>
         </ul>
       </div>
       <div class="col-md-6">
@@ -154,6 +157,47 @@ p Paragraph</pre>
         <td><pre>&lt;pre&gt;
   &amp;lt;a href=&quot;#&quot;&amp;gt;Link&amp;lt;/a&amp;gt;
 &lt;/pre&gt;</pre>
+        </td>
+      </tr>
+      <tr>
+        <th>Scripts</th>
+        <td><pre>+script &lt;:
+//This will not be HTML encoded.
+$(function() { ... })
+&gt;</pre>
+        </td>
+        <td><pre>&lt;script&gt;
+  //This will not be HTML encoded.
+  $(function() { ... })
+&lt;/script&gt;</pre>
+        </td>
+      </tr>
+      <tr>
+        <th>One line, multiple elements</th>
+        <td><pre>table+
+tr+ | th X | th Y |-
+tr+ | td x | td y |-
+-</pre>
+        </td>
+        <td><pre>&lt;table&gt;
+  &lt;tr&gt;
+    &lt;th&gt;X&lt;/th&gt;
+    &lt;th&gt;Y&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;x&lt;/td&gt;
+    &lt;td&gt;y&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;</pre>
+        </td>
+      </tr>
+      <tr>
+        <th>Mixing text and elements</th>
+        <td><pre>p &lt;
+This a text containing a &lt;a { href:# } link /&gt;.
+&gt;</pre>
+        </td>
+        <td><pre>&lt;p&gt;This a text containing a &lt;a href=&quot;#&quot;&gt;link&lt;/a&gt;.&lt;/p&gt;</pre>
         </td>
       </tr>
       <tr>
