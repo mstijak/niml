@@ -1,7 +1,7 @@
 div+ { class: row }
 div+ { class: col-md-6 }
 p NIML:
-textarea { id:input style: "width: 100%" rows: 20 } <:
+textarea { id:input style: "width: 100%; font-family: monospace;" rows: 20 } <:
 html+&#10;&#10;head&#10;+title NIML&#10;+link { href: niml.css rel: stylesheet type: text/css  }&#10;&#10;body+&#10;div+ { class: container }&#10;h1 NIML&#10;p Paragraph&#10;
 >
 -
