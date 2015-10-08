@@ -23,3 +23,4 @@ At the moment, NIML is in it's very early stage. Ideas and contributions are ver
 ## Implementations
 
 - node - https://github.com/mstijak/niml-node
+- C# - https://github.com/mstijak/niml.net
